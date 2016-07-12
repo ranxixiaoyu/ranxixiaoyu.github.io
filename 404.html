@@ -1,39 +1,48 @@
 ---
-layout: default
-title: 404 - Page not found
-visible: false
+layout: null
+title: 404
+permalink: /404.html
 ---
 
-<div id="content" class="content">
-    <header class="post-header short-diver">
-        <h1 class="post-title">Page not found</h1>
-        <p>The page you requested could not be found.</p>
-    </header>
 
-    <h3>Similar URLs</h3>
-    <ul class="category recent-posts">
-        <ul class="urlSuggestions"></ul>
-    </ul>
-</div>
+<!DOCTYPE html>
+<html>
 
-<script id="article-template" type="text/x-custom-template">
-    <li>
-        <div class="article">
-            <article class="article" itemscope itemtype="http://schema.org/BlogPosting">
-                <header class="post-header">
-                    <span class="title"><a itemprop="name" href="" title=""></a></span>
-                    <time class="date" itemprop="datePublished" datetime=""></time>
-                </header>
-            </article>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>404 Error</title>
+
+    <link href="{{"static/css/bootstrap.min.css" | prepend: site.baseurl}}" rel="stylesheet">
+    <link href="{{"static/font-awesome/css/font-awesome.css" | prepend: site.baseurl}}" rel="stylesheet">
+
+    <link href="{{"static/css/animate.css" | prepend: site.baseurl}}" rel="stylesheet">
+    <link href="{{"static/css/style.css" | prepend: site.baseurl}}" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+
+    <div class="middle-box text-center animated fadeInDown">
+        <h1>404</h1>
+        <h3 class="font-bold">Page Not Found</h3>
+
+        <div class="error-desc">
+            <p>
+            Sorry, but the page you are looking for has note been found. Try checking the URL for error, then hit the refresh button on your browser or try found something else in my website.
+            </p>
+            <div>
+                <a type="button" class="btn btn-primary" href="/">Home</a>
+            </div>
         </div>
-    </li>
-</script>
+    </div>
 
-<script src="{{ site.github.url | prepend: site.baseurl }}/js/jquery-1.12.0.min.js"></script>
-<script src="{{ site.github.url | prepend: site.baseurl }}/js/fuzzyset.js"></script>
-<script src="{{ site.github.url | prepend: site.baseurl }}/js/offline.js"></script>
-<script>
-    $(document).ready(function () {
-        insertSimilarUrls(String(window.location.href), "{{ site.github.url | prepend: site.baseurl }}/api/posts.json", "#article-template", ".urlSuggestions", 10);
-    });
-</script>
+    <!-- Mainly scripts -->
+    <script src="{{"static/js/jquery-2.1.1.js" | prepend: site.baseurl}}"></script>
+    <script src="{{"static/js/bootstrap.min.js" | prepend: site.baseurl}}"></script>
+
+</body>
+
+</html>

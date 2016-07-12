@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html lang="{% if page.language %}{{ page.language | downcase }}{% else %}{{ site.language | downcase }}{% endif %}">
-{% include head.html %}
+<html>
 
-<body class="home-template">
-    <div class="site-wrapper">
-        {% include header.html %}
-        {{ content }}        
-        {% include footer.html %}
-    </div>
+	{% if page.title != 'index' %}
+	    {% include head.html %}
+	{% else %}
+		{% include index_head.html %}
+	{% endif %}
+
+
+<body id="page-top" class="landing-page">
+
+	{% if page.title != 'index' %}
+	    {% include header.html %}
+	{% endif %}
+
+    {{ content }}
+
+	{% if page.title != 'index' %}
+	    {% include footer.html %}
+	{% else %}
+		{% include index_footer.html %}
+	{% endif %}
+
 </body>
-
-<script src="{{ site.github.url | prepend: site.baseurl}}/js/global.js"></script>
 </html>

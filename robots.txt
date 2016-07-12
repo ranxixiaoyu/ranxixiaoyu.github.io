@@ -1,3 +1,5 @@
+---
+title: robots
+---
 User-agent: *
-Disallow:
-Host: http://jwillmer.github.io/jekyllDecent
+Sitemap: <{{site.production_url}}/sitemap.xml>
